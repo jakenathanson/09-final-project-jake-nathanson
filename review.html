@@ -19,6 +19,23 @@
    const myParam = urlParams.get('code');
    console.log(myParam);
 
+   var data = null;
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+ var link = "https://us-central1-myuber2018-b1542.cloudfunctions.net/uberdata?code="+myParam
+xhr.open("GET", link);
+xhr.setRequestHeader("cache-control", "no-cache");
+xhr.setRequestHeader("Postman-Token", "6dd85b6e-adb8-460f-986a-366261032a2d");
+
+xhr.send(data);
+
 hola();
  }
 
@@ -361,7 +378,7 @@ hola();
   pna = new ParticleNetworkAnimation();
   pna.init($(".particle-network-animation")[0]);
 };
-hola();
+
   </script>
   <body style="background-color:black;"  onload="getData();">
 
