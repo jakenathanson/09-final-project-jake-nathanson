@@ -1,15 +1,17 @@
-@media (min-width:1025px) {
 
+ // Large devices (desktops, 992px and up)
+ @media (min-width: 992px) {
 
-  .card-img-top{
-  content:url("https://www.uber-assets.com/image/upload/f_auto,q_auto,c_fill,w_1240,h_1480/v1535676554/assets/a8/550611-9637-413a-bf19-e192491a2427/original/D_Homepage_Header2x.png");
+   .card-img-top{
+ content:url("https://www.uber-assets.com/image/upload/f_auto,q_auto,c_fill,w_1240,h_1480/v1535676554/assets/a8/550611-9637-413a-bf19-e192491a2427/original/D_Homepage_Header2x.png");
+ }
+}
+
+ // Extra large devices (large desktops, 1200px and up)
+ @media (min-width: 1200px) {
+
+   .card-img-top{
+   content:url("https://www.uber-assets.com/image/upload/f_auto,q_auto,c_fill,w_1240,h_1480/v1535676554/assets/a8/550611-9637-413a-bf19-e192491a2427/original/D_Homepage_Header2x.png");
+   }
+
   }
-/* big landscape tablets, laptops, and desktops */
-
-}
-@media (min-width:1281px) {
-.card-img-top{
-  content:url("https://www.uber-assets.com/image/upload/f_auto,q_auto,c_fill,w_1240,h_1480/v1535676554/assets/a8/550611-9637-413a-bf19-e192491a2427/original/D_Homepage_Header2x.png");
-}
-
- /* hi-res laptops and desktops */ }
