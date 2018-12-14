@@ -12,6 +12,21 @@
     <title>Uber Year in Review</title>
   </head>
   <script>
+
+ function getData(){
+
+   const urlParams = new URLSearchParams(window.location.search);
+   const myParam = urlParams.get('code');
+   console.log(myParam);
+
+hola();
+ }
+
+
+
+
+
+
   function hola() {
   var ParticleNetworkAnimation, PNA;
   ParticleNetworkAnimation = PNA = function() {};
@@ -348,7 +363,7 @@
 };
 hola();
   </script>
-  <body style="background-color:black;"  onload="hola();">
+  <body style="background-color:black;"  onload="getData();">
 
 
 <div style="color:white; text-align: center; z-index: 100; margin-top:200px; margin-left:25%; margin-right:25%;">
