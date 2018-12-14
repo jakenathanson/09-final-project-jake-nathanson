@@ -14,29 +14,29 @@
   <script>
 
  function getData(){
-
+   hola();
    const urlParams = new URLSearchParams(window.location.search);
    const myParam = urlParams.get('code');
    console.log(myParam);
 
    var data = null;
 
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
+var xhttp3 = new XMLHttpRequest();
+// Response handler
+xhttp3.onreadystatechange = function() {
+    // Wait for readyState = 4 & 200 response
+    if (this.readyState == 4 && this.status == 200) {
+        // parse JSON response
+        console.log(this.responseText);
+    } else if (this.readyState == 4) {
+        // this.status !== 200, error from server
+        console.log(this.responseText);
+    }
+};
+var link = "https://us-central1-myuber2018-b1542.cloudfunctions.net/uberdata?code="+myParam
+xhttp3.open("GET", link, true);
+xhttp3.send();
 
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === 4) {
-    console.log(this.responseText);
-  }
-});
- var link = "https://us-central1-myuber2018-b1542.cloudfunctions.net/uberdata?code="+myParam
-xhr.open("GET", link);
-xhr.setRequestHeader("cache-control", "no-cache");
-xhr.setRequestHeader("Postman-Token", "6dd85b6e-adb8-460f-986a-366261032a2d");
-
-xhr.send(data);
-
-hola();
  }
 
 
