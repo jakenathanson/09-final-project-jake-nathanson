@@ -2,8 +2,7 @@
 
 
   .card-img-top{
-    display: none;
-
+  content:url("");
   }
 /* big landscape tablets, laptops, and desktops */
 
@@ -11,7 +10,8 @@
 @media (min-width:1281px) {
 
 .card-img-top{
-  visibility: none;
+  content:url("");
+
 
 }
 
