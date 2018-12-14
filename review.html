@@ -28,7 +28,7 @@ xhttp3.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         // parse JSON response
         console.log(this.responseText);
-
+        $( "loadmessage" ).hide();
 
 
     } else if (this.readyState == 4) {
@@ -385,9 +385,8 @@ xhttp3.send();
   <body style="background-color:black;"  onload="getData();">
 
 
-<div style="color:white; text-align: center; z-index: 100; margin-top:200px; margin-left:25%; margin-right:25%;">
+<div id="loadmessage"style="color:white; text-align: center; z-index: 100; margin-top:200px; margin-left:25%; margin-right:25%;">
 <h5>Your Data is Loading Please Wait</h5>
-
 </div>
 
     <div class='particle-network-animation'>
