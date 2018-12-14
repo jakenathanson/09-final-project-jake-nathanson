@@ -28,6 +28,9 @@ xhttp3.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         // parse JSON response
         console.log(this.responseText);
+
+        
+
     } else if (this.readyState == 4) {
         // this.status !== 200, error from server
         console.log(this.responseText);
