@@ -34,7 +34,7 @@ xhttp3.onreadystatechange = function() {
         var obj = JSON.parse(this.responseText);
         console.log(obj.full_name);
         document.getElementById("nameplate").innerHTML=obj.full_name+'s';
-        document.getElementById("2018_ridecount").innerHTML=String(obj.2018_ridecount);
+        document.getElementById("2018_ridecount").innerHTML=String(obj."2018_ridecount");
         $("#loadmessage").hide();
         $("#dataviz").hide();
         $("#container").show();
