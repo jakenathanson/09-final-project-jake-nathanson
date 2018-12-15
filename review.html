@@ -59,7 +59,9 @@ xhttp3.onreadystatechange = function() {
         document.getElementById("total_ridecount").innerHTML=obj.total_ridecount;
         document.getElementById("miles_2018").innerHTML=Math.round(obj.miles_2018);
         document.getElementById("miles_2017").innerHTML=Math.round(obj.miles_2017);
-        document.getElementById("shortest_miles2018").innerHTML=Math.round(obj.shortest_miles2018);
+        document.getElementById("shortest_miles2018").innerHTML=(obj.shortest_miles2018);
+        document.getElementById("longest_miles2018").innerHTML=(obj.longest_miles2018);
+
         var CaliDistance = Math.round((obj.miles_2018/2789)*100);
         document.getElementById("CaliDistance").innerHTML=CaliDistance+"%"
         var miles_percent = Math.round(((obj.miles_2018-obj.miles_2017)/(obj.miles_2018))*100.00);
@@ -471,8 +473,8 @@ That's <a id="miles_percent"style="color: green;">null</a> more than 2017 when y
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Your Longest Mile Trip</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text">Your shortest trip was <a style="color:blue"id="longest_miles2018">null</a> miles. That's the distance of <a style="color:blue"id="empire">null</a> empire state buildings stacked together.</p>
+
       </div>
     </div>
   </div>
