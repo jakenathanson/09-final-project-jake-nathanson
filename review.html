@@ -61,7 +61,7 @@ xhttp3.onreadystatechange = function() {
         document.getElementById("miles_2017").innerHTML=Math.round(obj.miles_2017);
         document.getElementById("shortest_miles2018").innerHTML=(obj.shortest_miles2018);
         document.getElementById("longest_miles2018").innerHTML=(obj.longest_miles2018);
-        document.getElementById("building").innerHTML=(obj.longest_miles2018);
+        document.getElementById("building").innerHTML=Math.round((obj.longest_miles2018));
         var football = Math.round(17.6*obj.shortest_miles2018);
         document.getElementById("football").innerHTML=(football);
 
