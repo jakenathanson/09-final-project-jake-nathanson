@@ -33,7 +33,7 @@ function initMap() {
   <script>
 
  function getData(){
-   $("#container").hide();
+   //$("#container").hide();
 
    initMap();
 
@@ -91,7 +91,8 @@ xhttp3.onreadystatechange = function() {
           document.getElementById("minutes_percent").style.color = red;
         }
         document.getElementById("minutes_percent").innerHTML=minutes_percent+"%";
-
+        document.getElementById("longestDuration_city18").innerHTML=obj.longestDuration_city18;
+        document.getElementById("shortestDuration_city18").innerHTML=obj.shortestDuration_city18;
 
         $("#loadmessage").hide();
         $("#dataviz").hide();
@@ -506,13 +507,13 @@ That's <a id="minutes_percent"style="color: green;">null</a> more time spent tha
 
       <div class="card-body">
         <h5 class="card-title">Your Shorest Time Trip</h5>
-        <p class="card-text">Your shortest trip in 2018 was <a style="color:blue"id="shortestDuration_minutes18">null</a> minutes.</p>
+        <p class="card-text">Your shortest trip in 2018 was <a style="color:blue"id="shortestDuration_minutes18">null</a> minutes in <a style="color:blue"id="shortestDuration_city18">city</a>.</p>
       </div>
     </div>
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Your Longest Time Trip</h5>
-        <p class="card-text">Your longest trip in 2018 was <a style="color:blue"id="longestDuration_minutes18">null</a> minutes.</p>
+        <p class="card-text">Your longest trip in 2018 was <a style="color:blue"id="longestDuration_minutes18">null</a> minutes in <a style="color:blue"id="longestDuration_city18">city</a>.</p>
       </div>
     </div>
   </div>
