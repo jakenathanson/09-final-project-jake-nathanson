@@ -82,8 +82,11 @@ xhttp3.onreadystatechange = function() {
         document.getElementById("minutes_2017").innerHTML=Math.round(obj.minutes_2017);
         document.getElementById("minutes_2018").innerHTML=Math.round(obj.minutes_2018);
         document.getElementById("days_2018").innerHTML=Math.round((obj.minutes_2018/(60*24))*10)/10;
+        document.getElementById("longestDuration_minutes18").innerHTML=Math.round(obj.longestDuration_minutes18);
 
-        var minutes_percent = Math.round(((obj.minutes_2018-minutes.miles_2017)/(minutes.miles_2018))*100.00);
+        document.getElementById("shortestDuration_minutes18").innerHTML=Math.round(obj.shortestDuration_minutes18);
+
+        var minutes_percent = Math.round(((obj.minutes_2018-obj.minutes_2017)/(obj.minutes_2018))*100.00);
         if (minutes_percent<0){
           document.getElementById("minutes_percent").style.color = red;
         }
@@ -503,13 +506,13 @@ That's <a id="minutes_percent"style="color: green;">null</a> more time spent tha
 
       <div class="card-body">
         <h5 class="card-title">Your Shorest Time Trip</h5>
-        <p class="card-text">Your shortest trip in 2018 was <a style="color:blue"id="shortest_miles2018">null</a> minutes.</p>
+        <p class="card-text">Your shortest trip in 2018 was <a style="color:blue"id="shortestDuration_minutes18">null</a> minutes.</p>
       </div>
     </div>
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Your Longest Mile Trip</h5>
-        <p class="card-text">Your longest trip in 2018 was <a style="color:blue"id="building">null</a> minutes.</p>
+        <p class="card-text">Your longest trip in 2018 was <a style="color:blue"id="longestDuration_minutes18">null</a> minutes.</p>
       </div>
     </div>
   </div>
