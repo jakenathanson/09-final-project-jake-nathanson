@@ -94,7 +94,8 @@ xhttp3.onreadystatechange = function() {
         document.getElementById("minutes_percent").innerHTML=minutes_percent+"%";
         document.getElementById("longestDuration_city18").innerHTML=obj.longestDuration_city18;
         document.getElementById("shortestDuration_city18").innerHTML=obj.shortestDuration_city18;
-
+        document.getElementById("max_days_between_trips").innerHTML=Math.round(obj.max_days_between_trips);
+        document.getElementById("min_hours_between_trips").innerHTML=Math.round(obj.min_hours_between_trips);
         $("#loadmessage").hide();
         $("#dataviz").hide();
         $("#container").show();
@@ -523,6 +524,15 @@ That's <a id="minutes_percent"style="color: green;">null</a> more time spent tha
         <p class="card-text">Your average trip in 2018 was <a style="color:blue"id="avg_minutes_2018">null</a> minutes.</p>
       </div>
     </div>
+  </div>
+  <div class="card-header">
+    How frequently did you Uber in 2018?
+  </div>
+  <div class="card-body">
+    <h6 class="card-title">In 2018, the max days you went without taking an Uber was <a style="color:blue"id="max_days_between_trips">null</a> days and the minimum hours you went without taking an Uber was <a style="color:blue"id="min_hours_between_trips">null</a> hours.</h6>
+  </div>
+  <div class="card-header">
+    Your 2018 City List
   </div>
 
 
