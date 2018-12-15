@@ -35,12 +35,14 @@ xhttp3.onreadystatechange = function() {
         console.log(obj.full_name);
         document.getElementById("nameplate").innerHTML=obj.full_name+'s';
         document.getElementById("ridecount_2018").innerHTML=obj.ridecount_2018;
+        document.getElementById("ridecount_2018").innerHTML=obj.ridecount_2017;
+        var ride_count_percent = (obj.ridecount_2018-obj.ridecount_2017)/(obj.ridecount_2018);
+        document.getElementById("ridecount_2018").innerHTML=ride_count_percent;
+
+
         $("#loadmessage").hide();
         $("#dataviz").hide();
         $("#container").show();
-
-
-
 
     } else if (this.readyState == 4) {
         // this.status !== 200, error from server
@@ -407,8 +409,7 @@ xhttp3.send();
     <h5 class="card-title">In 2018, you took  <a style="color:blue"id="ridecount_2018">null</a> rides.
 </h5>
     <p class="card-text">
-  Let's take a look back on your 2018 through Uber Rides. We will need you to grant access to your basic ride history, we never store or share your information. </p>
-    <a href="https://login.uber.com/oauth/v2/authorize?response_type=code&client_id=-Ny8VjXKWND__8OWErpFvfermjFD7rPA&scope=history+profile&redirect_uri=https://wustlcse204.github.io/09-final-project-jake-nathanson/review" class="btn btn-success">Login with Uber</a>
+  That's <a id="ride_count_percent"style="color: green;">25%</a> more</p>
   </div>
   <!-- https://login.uber.com/oauth/v2/authorize?response_type=code&client_id=-Ny8VjXKWND__8OWErpFvfermjFD7rPA&scope=history+profile&redirect_uri=https://us-central1-myuber2018-b1542.cloudfunctions.net/uberdata -->
 
