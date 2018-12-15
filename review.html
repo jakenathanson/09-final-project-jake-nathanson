@@ -99,6 +99,11 @@ xhttp3.onreadystatechange = function() {
         var min_minutes_between_trips = Math.round(obj.min_hours_between_trips*60);
         document.getElementById("min_minutes_between_trips").innerHTML=min_minutes_between_trips;
 
+        for (var property in obj.city_count) {
+    if (object.hasOwnProperty(property)) {
+        console.log(property);
+    }
+}
         //for
 
         //
