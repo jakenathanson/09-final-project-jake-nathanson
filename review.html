@@ -14,6 +14,8 @@
   <script>
 
  function getData(){
+   document.getElementById("nameplate").innerHTML="Jake";
+
    hola();
    const urlParams = new URLSearchParams(window.location.search);
    const myParam = urlParams.get('code');
@@ -392,12 +394,13 @@ xhttp3.send();
     <div id="container" style="margin-left:10%; margin-right:10%; margin-top: 10%;">
     <div class="card text-white bg-dark mb-3" style="">
   <div class="card-header">
+    <a id="nameplate">Name Plate</a>
     Uber Year in Review
   </div>
   <div id="image1" style="background-color:black;">
   </div>
   <div class="card-body">
-    <h5 class="card-title">Welcome to Your 2018 Rides in Review</h5>
+    <h5 class="card-title">In 2018, you took </h5>
     <p class="card-text">
   Let's take a look back on your 2018 through Uber Rides. We will need you to grant access to your basic ride history, we never store or share your information. </p>
     <a href="https://login.uber.com/oauth/v2/authorize?response_type=code&client_id=-Ny8VjXKWND__8OWErpFvfermjFD7rPA&scope=history+profile&redirect_uri=https://wustlcse204.github.io/09-final-project-jake-nathanson/review" class="btn btn-success">Login with Uber</a>
