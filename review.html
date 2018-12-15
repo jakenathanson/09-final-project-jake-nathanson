@@ -52,11 +52,14 @@ xhttp3.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         // parse JSON response
         console.log(this.responseText);
-        var obj = JSON.parse(this.responseText);
 
         if(this.responseText=="invalid_grant"){
           console.log("fail");
         }
+        
+        var obj = JSON.parse(this.responseText);
+
+
         console.log(obj.full_name);
         document.getElementById("nameplate").innerHTML=obj.full_name+'s';
         document.getElementById("ridecount_2018").innerHTML=obj.ridecount_2018;
