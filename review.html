@@ -107,6 +107,15 @@ xhttp3.onreadystatechange = function() {
     }
 }
 for (i = 0; i < keys.length; i++) {
+
+  var city = document.createElement("LI");
+  city.classList.add("list-group-item");
+  var ItemText = document.createTextNode(key[i]+":"+obj.city_count[keys[i]]);
+  city.appendChild(ItemText);
+  document.getElementById("citylist").appendChild(city);
+
+
+
 console.log(obj.city_count[keys[i]]);
 }
 
@@ -557,7 +566,7 @@ That's <a id="minutes_percent"style="color: green;">null</a> more time spent tha
   <div class="card-body">
     <h6 class="card-title">In 2018, the max days you went without taking an Uber was <a style="color:blue"id="max_days_between_trips">null</a> days and the minimum hours you went without taking an Uber was <a style="color:blue"id="min_hours_between_trips">null</a> hours.(<a style="color:blue" id="min_minutes_between_trips"></a> minutes)</h6>
   </div>
-  <div class="card-header">
+  <div class="card-header" id="citylist">
     Your 2018 City List
   </div>
 
