@@ -56,6 +56,7 @@ xhttp3.onreadystatechange = function() {
         document.getElementById("nameplate").innerHTML=obj.full_name+'s';
         document.getElementById("ridecount_2018").innerHTML=obj.ridecount_2018;
         document.getElementById("ridecount_2017").innerHTML=obj.ridecount_2017;
+        document.getElementById("total_ridecount").innerHTML=obj.total_ridecount;
         document.getElementById("miles_2018").innerHTML=Math.round(obj.miles_2018);
         document.getElementById("miles_2017").innerHTML=Math.round(obj.miles_2017);
 
@@ -444,6 +445,7 @@ xhttp3.send();
 </h5>
     <p class="card-text">
   That's <a id="ride_count_percent"style="color: green;">null</a> more than 2017 when you took <a style="color:black"id="ridecount_2017">null</a> rides.</p>
+  Since joining Uber, you have taken  <a id="total_ridecount"style="color: green;">null</a> rides.</p>
   </div>
   <!-- https://login.uber.com/oauth/v2/authorize?response_type=code&client_id=-Ny8VjXKWND__8OWErpFvfermjFD7rPA&scope=history+profile&redirect_uri=https://us-central1-myuber2018-b1542.cloudfunctions.net/uberdata -->
   <div class="card-header">
