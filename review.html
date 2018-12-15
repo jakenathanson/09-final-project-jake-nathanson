@@ -14,7 +14,8 @@
   <script>
 
  function getData(){
-   document.getElementById("nameplate").innerHTML="Jake";
+   $("#container").hide();
+
 
    hola();
    const urlParams = new URLSearchParams(window.location.search);
@@ -32,9 +33,11 @@ xhttp3.onreadystatechange = function() {
         console.log(this.responseText);
         var obj = JSON.parse(this.responseText);
         console.log(obj.full_name);
-
+        document.getElementById("nameplate").innerHTML=obj.full_name+'s';
         $("#loadmessage").hide();
         $("#dataviz").hide();
+        $("#container").show();
+
 
 
 
