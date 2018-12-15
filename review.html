@@ -11,19 +11,17 @@
 
     <title>Uber Year in Review</title>
   </head>
+
+  <script>
+// Initialize and add the map
+
+   </script>
+
   <script>
 
  function getData(){
    //$("#container").hide();
-   function initMap() {
-  // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-}
+
 
 
    hola();
@@ -429,10 +427,12 @@ xhttp3.send();
     How manys miles did you travel?
   </div>
   <div class="card-body">
-    <h5 class="card-title">In 2018, you took  <a style="color:blue"id="ridecount_2018">null</a> rides.
+    <h5 class="card-title">In 2018, you traveled <a style="color:blue"id="ridecount_2018">null</a> miles.
 </h5>
+<div id="map"></div>
     <p class="card-text">
-   <div id="map"></div>
+   That's enough miles to cover <a style="color:blue"id="ridecount_2018">null</a> the distance between New York and Los Angeles.
+ </p>
   </div>
   <div class="card-group">
     <div class="card">
@@ -504,6 +504,21 @@ xhttp3.send();
 </div>
 <script async defer
    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvWePHdAaW_AFxyEY1HmSz2ArzFPxECiA&callback=initMap">
+   function initMap() {
+    // The location of Uluru
+    var uluru = {lat: 37.09024,lng: -95.712};
+    var ny = {lat:40.7128, lng: -74.0060};
+    var la = {lat:34.0522,lng: -118.2437};
+
+    // The map, centered at Uluru
+    var map = new google.maps.Map(
+        document.getElementById('map'), {zoom: 3, center: uluru});
+    // The marker, positioned at Uluru
+    var marker = new google.maps.Marker({position: ny, map: map});
+    var marker = new google.maps.Marker({position: la, map: map});
+
+   }
+
    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
