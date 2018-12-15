@@ -15,6 +15,15 @@
 
  function getData(){
    //$("#container").hide();
+   function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
 
 
    hola();
@@ -41,7 +50,6 @@ xhttp3.onreadystatechange = function() {
         if (ride_count_percent<0){
           document.getElementById("ride_count_percent").style.color = red;
         }
-
         document.getElementById("ride_count_percent").innerHTML=ride_count_percent+"%";
 
 
@@ -417,11 +425,27 @@ xhttp3.send();
   That's <a id="ride_count_percent"style="color: green;">null</a> more than 2017 when you took <a style="color:black"id="ridecount_2017">null</a> rides.</p>
   </div>
   <!-- https://login.uber.com/oauth/v2/authorize?response_type=code&client_id=-Ny8VjXKWND__8OWErpFvfermjFD7rPA&scope=history+profile&redirect_uri=https://us-central1-myuber2018-b1542.cloudfunctions.net/uberdata -->
-
+  <div class="card-header">
+    How manys miles did you travel?
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">In 2018, you took  <a style="color:blue"id="ridecount_2018">null</a> rides.
+</h5>
+    <p class="card-text">
+   <div id="map"></div>
+  </div>
   <div class="card-group">
     <div class="card">
+
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <h5 class="card-title">Total</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Shorest</h5>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
@@ -478,6 +502,9 @@ xhttp3.send();
     <div class='particle-network-animation' id="dataviz">
 
 </div>
+<script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvWePHdAaW_AFxyEY1HmSz2ArzFPxECiA&callback=initMap">
+   </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
