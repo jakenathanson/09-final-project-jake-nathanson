@@ -34,7 +34,7 @@ xhttp3.onreadystatechange = function() {
         var obj = JSON.parse(this.responseText);
         console.log(obj.full_name);
         document.getElementById("nameplate").innerHTML=obj.full_name+'s';
-        document.getElementById("2018_ridecount").innerHTML=String(obj."2018_ridecount");
+        document.getElementById("total_ridecount").innerHTML=obj.innerHTML;
         $("#loadmessage").hide();
         $("#dataviz").hide();
         $("#container").show();
@@ -404,7 +404,7 @@ xhttp3.send();
   <div id="image1" style="background-color:black;">
   </div>
   <div class="card-body">
-    <h5 class="card-title">In 2018, you took  <a style="color:blue"id="2018_ridecount">null</a>
+    <h5 class="card-title">In 2018, you took  <a style="color:blue"id="total_ridecount">null</a>
 </h5>
     <p class="card-text">
   Let's take a look back on your 2018 through Uber Rides. We will need you to grant access to your basic ride history, we never store or share your information. </p>
