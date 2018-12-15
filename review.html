@@ -59,7 +59,7 @@ xhttp3.onreadystatechange = function() {
         document.getElementById("miles_2018").innerHTML=obj.miles_2018;
         document.getElementById("miles_2017").innerHTML=obj.miles_2017;
 
-        var CaliDistance = (obj.miles_2018/2789)*100;
+        var CaliDistance = Math.round((obj.miles_2018/2789)*100);
         document.getElementById("CaliDistance").innerHTML=CaliDistance+"%"
         var miles_percent = Math.round(((obj.miles_2018-obj.miles_2017)/(obj.miles_2018))*100.00);
         var ride_count_percent = Math.round(((obj.ridecount_2018-obj.ridecount_2017)/(obj.ridecount_2018))*100.00);
