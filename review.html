@@ -56,8 +56,8 @@ xhttp3.onreadystatechange = function() {
         document.getElementById("nameplate").innerHTML=obj.full_name+'s';
         document.getElementById("ridecount_2018").innerHTML=obj.ridecount_2018;
         document.getElementById("ridecount_2017").innerHTML=obj.ridecount_2017;
-        document.getElementById("miles_2018").innerHTML=obj.miles_2018;
-        document.getElementById("miles_2017").innerHTML=obj.miles_2017;
+        document.getElementById("miles_2018").innerHTML=Math.round(obj.miles_2018);
+        document.getElementById("miles_2017").innerHTML=Math.round(obj.miles_2017);
 
         var CaliDistance = Math.round((obj.miles_2018/2789)*100);
         document.getElementById("CaliDistance").innerHTML=CaliDistance+"%"
