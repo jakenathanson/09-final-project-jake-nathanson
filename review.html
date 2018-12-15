@@ -110,7 +110,7 @@ for (i = 0; i < keys.length; i++) {
 
   var city = document.createElement("LI");
   city.classList.add("list-group-item");
-  var ItemText = document.createTextNode(key[i]+":"+obj.city_count[keys[i]]);
+  var ItemText = document.createTextNode(keys[i]+":"+obj.city_count[keys[i]]);
   city.appendChild(ItemText);
   document.getElementById("citylist").appendChild(city);
 
