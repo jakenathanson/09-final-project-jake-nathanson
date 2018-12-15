@@ -95,7 +95,7 @@ xhttp3.onreadystatechange = function() {
         document.getElementById("longestDuration_city18").innerHTML=obj.longestDuration_city18;
         document.getElementById("shortestDuration_city18").innerHTML=obj.shortestDuration_city18;
         document.getElementById("max_days_between_trips").innerHTML=Math.round(obj.max_days_between_trips);
-        document.getElementById("min_hours_between_trips").innerHTML=Math.round(obj.min_hours_between_trips);
+        document.getElementById("min_hours_between_trips").innerHTML=obj.min_hours_between_trips;
         $("#loadmessage").hide();
         $("#dataviz").hide();
         $("#container").show();
