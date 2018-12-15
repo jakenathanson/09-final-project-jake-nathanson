@@ -81,6 +81,8 @@ xhttp3.onreadystatechange = function() {
         document.getElementById("miles_percent").innerHTML=miles_percent+"%";
         document.getElementById("minutes_2017").innerHTML=obj.minutes_2017;
         document.getElementById("minutes_2018").innerHTML=obj.minutes_2018;
+        document.getElementById("days_2018").innerHTML=Math.round((obj.minutes_2018/(60*24))*10)/10;
+
         var minutes_percent = Math.round(((obj.minutes_2018-minutes.miles_2017)/(minutes.miles_2018))*100.00);
         if (minutes_percent<0){
           document.getElementById("minutes_percent").style.color = red;
