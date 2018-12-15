@@ -37,7 +37,7 @@ xhttp3.onreadystatechange = function() {
         document.getElementById("ridecount_2018").innerHTML=obj.ridecount_2018;
         document.getElementById("ridecount_2017").innerHTML=obj.ridecount_2017;
         var ride_count_percent = Math.round(((obj.ridecount_2018-obj.ridecount_2017)/(obj.ridecount_2018))*100.00);
-        ride_count_percent=-1;
+        ride_count_percent = -Math.abs(1);;
         if (ride_count_percent<0){
           document.getElementById("ride_count_percent").style.color = red;
         }
