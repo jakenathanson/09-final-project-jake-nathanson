@@ -79,6 +79,13 @@ xhttp3.onreadystatechange = function() {
         }
         document.getElementById("ride_count_percent").innerHTML=ride_count_percent+"%";
         document.getElementById("miles_percent").innerHTML=miles_percent+"%";
+        document.getElementById("minutes_2017").innerHTML=obj.minutes_2017;
+        document.getElementById("minutes_2018").innerHTML=obj.minutes_2018;
+        var minutes_percent = Math.round(((obj.minutes_2018-minutes.miles_2017)/(minutes.miles_2018))*100.00);
+        if (minutes_percent<0){
+          document.getElementById("minutes_percent").style.color = red;
+        }
+        document.getElementById("minutes_percent").innerHTML=obj.minutes_percent;
 
 
         $("#loadmessage").hide();
@@ -481,7 +488,14 @@ That's <a id="miles_percent"style="color: green;">null</a> more than 2017 when y
       </div>
     </div>
   </div>
-
+  <div class="card-header">
+    How much time did you spend in an Uber?
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">In 2018, you spent <a style="color:blue"id="minutes_2018">null</a> minutes in an Uber or almost <a style="color:blue"id="days_2018">null</a> days .
+</h5>
+That's <a id="minutes_percent"style="color: green;">null</a> more time spent than in 2017 when you spent <a style="color:blue"id="minutes_2017">null</a> minutes.</p>
+  </div>
 
 
 
