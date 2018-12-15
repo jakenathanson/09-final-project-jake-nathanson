@@ -53,6 +53,10 @@ xhttp3.onreadystatechange = function() {
         // parse JSON response
         console.log(this.responseText);
         var obj = JSON.parse(this.responseText);
+
+        if(this.responseText=="invalid_grant"){
+          console.log("fail");
+        }
         console.log(obj.full_name);
         document.getElementById("nameplate").innerHTML=obj.full_name+'s';
         document.getElementById("ridecount_2018").innerHTML=obj.ridecount_2018;
