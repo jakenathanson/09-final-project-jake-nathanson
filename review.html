@@ -57,15 +57,19 @@ xhttp3.onreadystatechange = function() {
         document.getElementById("ridecount_2018").innerHTML=obj.ridecount_2018;
         document.getElementById("ridecount_2017").innerHTML=obj.ridecount_2017;
         document.getElementById("miles_2018").innerHTML=obj.miles_2018;
-        var CaliDistance = (miles_2018/2789)*100;
-        document.getElementById("CaliDistance").innerHTML=obj.CaliDistance;
-
+        var CaliDistance = (obj.miles_2018/2789)*100;
+        document.getElementById("CaliDistance").innerHTML=CaliDistance+"%"
+        var miles_percent = Math.round(((obj.miles_2018-obj.miles_2017)/(obj.miles_2018))*100.00);
         var ride_count_percent = Math.round(((obj.ridecount_2018-obj.ridecount_2017)/(obj.ridecount_2018))*100.00);
         //ride_count_percent = -Math.abs(1);
         if (ride_count_percent<0){
           document.getElementById("ride_count_percent").style.color = red;
         }
+        if (miles_percent<0){
+          document.getElementById("mile_percent").style.color = red;
+        }
         document.getElementById("ride_count_percent").innerHTML=ride_count_percent+"%";
+        document.getElementById("miles_percent").innerHTML=miles_percent+"%";
 
 
         $("#loadmessage").hide();
@@ -446,6 +450,7 @@ xhttp3.send();
   <div class="card-body">
     <h5 class="card-title">In 2018, you traveled <a style="color:blue"id="miles_2018">null</a> miles.
 </h5>
+That's <a id="miles_percent"style="color: green;">null</a> more than 2017 when you traveled <a style="color:black"id="miles_2017">null</a> miles.</p>
 <div id="map"></div>
     <p class="card-text">
    That's enough miles to cover <a style="color:blue"id="CaliDistance">null</a> the distance between New York and Los Angeles.
